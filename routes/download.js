@@ -7,12 +7,12 @@ router.get('/:uuid', async(req, res) => {
     try {      
         const file = await File.findOne({ uuid: req.params.uuid });       
         if (!file) {
-            return res.sendFile('/Users/samiulkhan/Downloads/FileSharingApplication/views/download.html',{error:"something went wrong"})
+            return res.sendFile('../views/download.html',{error:"something went wrong"})
         }
         
-       return res.sendFile('/Users/samiulkhan/Downloads/FileSharingApplication/views/download.html');
+       return res.sendFile('../views/download.html');
 } catch (error) {
-    return res.sendFile('/Users/samiulkhan/Downloads/FileSharingApplication/views/download.html',{error:"something went wrong"})
+    return res.sendFile('../views/download.html',{error:"something went wrong"})
 }
 })
 
