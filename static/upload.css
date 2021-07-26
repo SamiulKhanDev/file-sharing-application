@@ -1,0 +1,83 @@
+:root{
+    --main-bg-color:#eff5fe;
+    --border--color:#0288d142;
+}
+
+body,html{
+    font-family: system-ui;
+    background-color: var(--main-bg-color);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upload{
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #0000002e;
+}
+.upload_dropzone{
+    width: 90vw;
+    min-height: 200px;
+    border: 2px  dashed;
+    border-color: var(--border--color);
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+
+}
+.dragged.upload_dropzone{
+background: var(--main-bg-color);
+border-color: darkblue;
+}
+.upload_dropzone_icon{
+    width: 75px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+.upload_dropzone_icon img{
+    width: 40px;
+    position: absolute;
+    transform-origin: bottom;
+    transition: transform .2s ease-in-out;
+}
+.upload_dropzone_icon .center{
+    z-index: 2;
+}
+.dragged .upload_dropzone_icon .right{
+    transform:rotate(10deg) translateX(20px);
+    transform-origin: bottom;
+    filter: grayscale(.6);
+}
+.dragged .upload_dropzone_icon .left{
+    transform:rotate(-10deg) translateX(-20px);
+    filter: grayscale(.6);
+   
+}
+.dragged .upload_dropzone_icon .center{
+    transform: translateY(-5px);
+}
+
+.browsebtn{
+    padding: 3px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+P{
+    font-size: 10px;
+}

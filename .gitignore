@@ -1,0 +1,5 @@
+config/config.env
+uplodedFiles/*
+!uplodedFiles/.gitkeep
+node_modules
+.DS_Store
