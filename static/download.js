@@ -2,7 +2,7 @@ const button = document.querySelector('.btn');
 const size = document.querySelector(".size");
 const main = document.querySelector(".main");
 button.addEventListener('click', () => {
-    console.log(`http://localhost:5000/download/${window.location.href.split("files/")[1]}`);
+    console.log(`https://file-share-samiul.herokuapp.com/download/${window.location.href.split("files/")[1]}`);
     const obj = getData()
     const mainOBj = {};
     obj.then(data => {
@@ -17,7 +17,7 @@ button.addEventListener('click', () => {
 });
 
 const getData = async () => {
-    const res = await fetch(`http://localhost:5000/download/${window.location.href.split("files/")[1]}`);
+    const res = await fetch(`https://file-share-samiul.herokuapp.com/download/${window.location.href.split("files/")[1]}`);
     const data = await res.json();
     return data; 
 }
