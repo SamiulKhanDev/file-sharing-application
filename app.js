@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/file', fileRoute);
-app.use('https://file-share-samiul.herokuapp.com',uploadRoute);
+app.use('https://file-share-samiul.herokuapp.com/',uploadRoute);
 app.use('/files', downloadRoute);
 app.use('/download', downoadFile);
 app.use('/files/download',mainDownLoadRoute)
