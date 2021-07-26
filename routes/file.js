@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
         
         try {
             const resp = await newFile.save();   
-            return res.json({file:`${process.env.FILE_BASE_URL}/files/${resp.uuid}`})
+            return res.json({file:`${process.env.FILE_BASE_URL}files/${resp.uuid}`})
         } catch (err) {
             res.status(500).send("sorry,operation failed");
             console.log(err);
