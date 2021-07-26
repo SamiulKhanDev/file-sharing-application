@@ -21,7 +21,7 @@ app.use('/api/file', fileRoute);
 app.use('/',uploadRoute);
 app.use('/files', downloadRoute);
 app.use('/download', downoadFile);
-app.use('/files/download',mainDownLoadRoute)
+app.use('files/download',mainDownLoadRoute)
 db();
 
 
