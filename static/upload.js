@@ -44,6 +44,8 @@ browsebtn.addEventListener('click',handleClick)
 const uploadData = () => {
     let data = new FormData()
     data.append('myfile', input.files[0]);
+    // console.log(data);
+    
     fetch('/api/file', {
         method: 'POST',
         body: data
